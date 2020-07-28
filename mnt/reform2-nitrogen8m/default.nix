@@ -23,4 +23,10 @@
     ];
   };
 
+  system.activationScripts.asound = ''
+    if [ ! -e "/var/lib/alsa/asound.state" ]; then
+      mkdir -p /var/lib/alsa
+      cp ${./initial-asound.state} /var/lib/alsa/asound.state
+    fi
+  '';
 }
