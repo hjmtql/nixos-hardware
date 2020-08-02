@@ -1,4 +1,4 @@
-commit 32ba0e0bf12827a67959f435e457fb4594a6708f
+commit ea40d91026ecfe107d0fe4874504e1c003711068
 Author: Emery Hemingway <ehmry@posteo.net>
 Date:   Mon Jul 27 10:18:38 2020 +0200
 
@@ -31,7 +31,7 @@ index d4d866001d..d1fac5934f 100644
  
  void board_set_default_env(void)
 diff --git a/include/configs/nitrogen8m_som.h b/include/configs/nitrogen8m_som.h
-index 3ada3900db..548e7cd71c 100644
+index 3ada3900db..95255f406e 100644
 --- a/include/configs/nitrogen8m_som.h
 +++ b/include/configs/nitrogen8m_som.h
 @@ -208,7 +208,7 @@
@@ -50,7 +50,7 @@ index 3ada3900db..548e7cd71c 100644
 -    BOOTENV*/
 +    BOOTENV \
 +	"kernel_addr_r=" __stringify(CONFIG_LOADADDR) "\0" \
-+	"ramdisk_addr_r=0x42800000\0" \
++	"ramdisk_addr_r=0x44480000\0" \
 +	"fdt_addr_r=0x43000000\0"
  
  /*
