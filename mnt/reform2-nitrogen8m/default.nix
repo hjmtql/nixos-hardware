@@ -3,10 +3,14 @@
 {
 
   boot = {
-    kernelParams = [ "cma=512M" "console=ttymxc0,115200" "pci=nomsi" ];
+    kernelParams =
+      [ "cma=512M" "console=ttymxc0,115200" "console=tty1" "pci=nomsi" ];
     loader = {
       generic-extlinux-compatible.enable = lib.mkDefault true;
       grub.enable = lib.mkDefault false;
+      timeout =
+        # U-boot menu only available over serial
+        lib.mkDefault 1;
     };
   };
 
